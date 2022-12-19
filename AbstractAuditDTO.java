@@ -1,4 +1,4 @@
- package com.xworkz.ipl.dto;
+package com.xworkz.theater.dto;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -12,6 +12,12 @@ public abstract class AbstractAuditDTO implements Serializable {
 	
 	public AbstractAuditDTO() {
 		System.out.println("Calling no-arg const of AbstractAuditDTO");
+	}
+
+	@Override
+	public String toString() {
+		return "AbstractAuditDTO [createdBy=" + createdBy + ", createdDate=" + createdDate + ", updatedBy=" + updatedBy
+				+ ", updatedDate=" + updatedDate + "]";
 	}
 
 	public String getCreatedBy() {
